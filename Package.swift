@@ -70,7 +70,7 @@ let package = Package(
             revision: "89de43c6c8c36f037da3db22230fa5356463b594"
         ),
         .package(
-            url: "https://github.com/DePasqualeOrg/swift-tokenizers.git", from: "0.3.2",
+            url: "git@github.com:Asisiov/swift-tokenizers.git", branch: "main",
             traits: [
                 .trait(name: "Swift", condition: .when(traits: ["Swift"])),
                 .trait(name: "Rust", condition: .when(traits: ["Rust"])),
