@@ -58,11 +58,11 @@ let package = Package(
         .library(name: "MLXLMTokenizers", targets: ["MLXLMTokenizers"]),
         .library(name: "MLXEmbeddersTokenizers", targets: ["MLXEmbeddersTokenizers"]),
     ],
-    traits: [
-        .default(enabledTraits: ["Swift"]),
-        .trait(name: "Swift"),
+    // traits: [
+        // .default(enabledTraits: ["Swift"]),
+        // .trait(name: "Swift"),
         // .trait(name: "Rust"),
-    ],
+    // ],
     dependencies: [
         // TODO: Switch from this pinned revision to a major-version dependency once mlx-swift-lm publishes a release that includes PR #118.
         .package(
@@ -70,11 +70,13 @@ let package = Package(
             revision: "89de43c6c8c36f037da3db22230fa5356463b594"
         ),
         .package(
-            url: "git@github.com:Asisiov/swift-tokenizers.git", branch: "main",
-            traits: [
-                .trait(name: "Swift", condition: .when(traits: ["Swift"])),
+            url: "git@github.com:Asisiov/swift-tokenizers.git", 
+            branch: "main"
+            // traits: [
+                // .trait(name: "Swift", condition: .when(traits: ["Swift"])),
                 // .trait(name: "Rust", condition: .when(traits: ["Rust"])),
-            ]),
+            // ]
+        ),
         .package(url: "https://github.com/DePasqualeOrg/swift-hf-api.git", from: "0.2.2"),
     ],
     targets: packageTargets
