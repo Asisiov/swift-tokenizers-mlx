@@ -61,7 +61,7 @@ let package = Package(
     traits: [
         .default(enabledTraits: ["Swift"]),
         .trait(name: "Swift"),
-        .trait(name: "Rust"),
+        // .trait(name: "Rust"),
     ],
     dependencies: [
         // TODO: Switch from this pinned revision to a major-version dependency once mlx-swift-lm publishes a release that includes PR #118.
@@ -73,7 +73,7 @@ let package = Package(
             url: "git@github.com:Asisiov/swift-tokenizers.git", branch: "main",
             traits: [
                 .trait(name: "Swift", condition: .when(traits: ["Swift"])),
-                .trait(name: "Rust", condition: .when(traits: ["Rust"])),
+                // .trait(name: "Rust", condition: .when(traits: ["Rust"])),
             ]),
         .package(url: "https://github.com/DePasqualeOrg/swift-hf-api.git", from: "0.2.2"),
     ],
